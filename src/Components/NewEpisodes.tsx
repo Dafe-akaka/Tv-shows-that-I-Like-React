@@ -3,24 +3,24 @@ import Episodes from "./Episodes.json";
 import TvShows from "./TvShows";
 
 function NewEpisodes(): JSX.Element {
-  const [input, setInput] = useState("");
+  const [searchTerm, setSearchTem] = useState("");
 
   return (
     <>
       <input
         type="text"
         placeholder="Search..."
-        value={input}
+        value={searchTerm}
         onChange={(event) => {
-          setInput(event.target.value);
+          setSearchTem(event.target.value);
         }}
       />
 
       {Episodes.filter((val) => {
-        if (input === "") {
+        if (searchTerm === "") {
           return val;
         } else if (
-          val.name.toLocaleLowerCase().includes(input.toLocaleLowerCase())
+          val.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
         ) {
           return val;
         }
