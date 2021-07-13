@@ -23,8 +23,16 @@ export interface IEpisode {
   
   export interface DropDownProps {
     episodeID: string;
-    setEpisodeId(episodeId: string): void;
+    setDropDown(episodeId: string): void
+  
   }
+
+  export interface DropDownFilterProps {
+    dropDown: string,
+    Episodes: IEpisode[],
+    tvShowsData: IEpisode[]
+}
+
 
 
   export interface episodeProp {

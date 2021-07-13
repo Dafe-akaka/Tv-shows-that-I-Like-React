@@ -1,5 +1,5 @@
 import React from "react";
-import NewEpisodes from "./Components/NewEpisodes";
+import AllEpisodes from "./Components/AllEpisodes";
 import "./App.css";
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <header></header>
-      <NewEpisodes/>
+      <AllEpisodes/>
 
     </div>
   );
