@@ -1,8 +1,4 @@
-
 import {  SearchBarProps } from "../Utils/Interfaces";
-
-
-
 
 
 export default function SearchBar({setSearchBar,episodeID}: SearchBarProps): JSX.Element {
