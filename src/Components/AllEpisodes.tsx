@@ -11,7 +11,6 @@ function AllEpisodes(): JSX.Element {
   const [search,setSearch] = useState("")
   const [dropDown,setDropDown] = useState("")
   const [episodesData,setEpisodesData] = useState<IEpisode[]>([])
- 
 
   useEffect(() =>{
 
@@ -25,7 +24,6 @@ function AllEpisodes(): JSX.Element {
   fetchEpisodesData()
 }, []) 
 
-  console.log(episodesData)
 
   //if dropdown is blank do :
   let filteredEps = []
@@ -35,7 +33,7 @@ function AllEpisodes(): JSX.Element {
 
   return (
     <>
-      <DropDown setDropDown= {setDropDown} episodeID= {search} />
+      <DropDown setDropDown= {setDropDown} episodeID= {dropDown} />
       <SearchBar setSearchBar= {setSearch} episodeID= {search}/>
 
       <div> {filteredEps.map((ep) => (
