@@ -1,9 +1,10 @@
 
 import { DropDownProps } from "../Utils/Interfaces";
-import Episodes from "./episodes.json";
+
 
 
 export const DropDown = ({
+  episodes,
   episodeID,
   setDropDown,
 }: DropDownProps): JSX.Element => {
@@ -22,7 +23,7 @@ export const DropDown = ({
           setDropDown(e.target.value);
         }}
       >
-        {Episodes.map((episode) => (
+        {episodes.map((episode) => (
           <option value={episode.id} key={episode.id}>
             {episode.season < 10 ? `S0${episode.season}` : `S${episode.season}`}
             {episode.number < 10 ? `E0${episode.number}` : `E${episode.number}`}

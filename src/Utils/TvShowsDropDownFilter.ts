@@ -1,6 +1,6 @@
-import { IEpisode } from "./Interfaces";
+import { IEpisode, tvShows } from "./Interfaces";
 
 
-export const  TvShowsDropDownFilter = ( tvShowsdropDown: string , Episodes: IEpisode[]): IEpisode[] => {
+export const  TvShowsDropDownFilter = ( tvShowsdropDown: string , Episodes: tvShows[]): tvShows[] => {
 return Episodes.filter((episode) => episode.name === tvShowsdropDown)
 }
