@@ -96,6 +96,10 @@ export interface singleEpisodeProp {
   ep: IEpisode;
 }
 
+export interface singleTvShowProp {
+  show: tvShows;
+}
+
 export interface tvShowDropDownProps {
   // tvShowsData: tvShows[];
   tvShowID: string;
