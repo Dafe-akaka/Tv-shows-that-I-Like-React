@@ -1,4 +1,4 @@
-import { TvShowsSearchBar } from "../Utils/Interfaces";
+import { TvShowsSearchBar } from "../../Utils/Interfaces";
 
 
 

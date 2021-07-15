@@ -57,10 +57,10 @@ export interface singleTvShowProp {
   show: tvShows;
 }
 
-export interface tvShowDropDownProps {
+export interface EpisodeDropDownProps {
   // tvShowsData: tvShows[];
-  tvShowID: string;
-  setTvShowDropDown(tvShowID: string): void;
+  episodeID: string;
+  setEpisodeDropDown(tvShowID: string): void;
 }
 
 
@@ -113,4 +113,10 @@ export interface tvShows {
     thetvdb: number | null;
     imdb: string | null;
   };
+}
+
+export interface TVshowDropDownProps {
+
+  tvShowID: string;
+  setTvShowDropDown(tvShowID: string): void;
 }

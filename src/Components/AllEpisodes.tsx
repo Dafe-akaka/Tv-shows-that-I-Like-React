@@ -6,7 +6,7 @@ import  SearchBar  from "./SearchBar";
 import { SearchFilter } from "../Utils/SearchFilter";
 import { DropDownFilter } from "../Utils/DropDownFilter";
 import { IEpisode } from "../Utils/Interfaces";
-import { TvShowDropDown } from "./TvShowDropDown";
+import { EpisodeDropDown } from "./EpisodeDropDown"
 
 function AllEpisodes(): JSX.Element {
   const [search,setSearch] = useState("")
@@ -37,7 +37,7 @@ function AllEpisodes(): JSX.Element {
     <>
       <DropDown setDropDown= {setDropDown} episodeID= {dropDown} episodes = {episodesData} />
       <SearchBar setSearchBar= {setSearch} episodeID= {search}/>
-      <TvShowDropDown setTvShowDropDown = {setTvShowDropDown} tvShowID= {tvShow} />
+      <EpisodeDropDown setEpisodeDropDown = {setTvShowDropDown} episodeID= {tvShow} />
       
 
       <div> {filteredEps.map((ep) => (

@@ -1,4 +1,4 @@
-import { singleTvShowProp } from "../Utils/Interfaces";
+import { singleTvShowProp } from "../../Utils/Interfaces";
 
 
 
