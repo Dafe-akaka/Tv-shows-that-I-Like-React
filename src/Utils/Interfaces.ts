@@ -41,6 +41,29 @@ export interface SearchBarProps {
   episodeID: string;
 }
 
+
+export interface TvShowsSearchBar {
+  setTvShowsSearchBar(tvShowID: string): void
+  tvShowID: string
+}
+
+
+
+export interface singleEpisodeProp {
+  ep: IEpisode;
+}
+
+export interface singleTvShowProp {
+  show: tvShows;
+}
+
+export interface tvShowDropDownProps {
+  // tvShowsData: tvShows[];
+  tvShowID: string;
+  setTvShowDropDown(tvShowID: string): void;
+}
+
+
 export interface tvShows {
   name: string;
   image: {
@@ -90,18 +113,4 @@ export interface tvShows {
     thetvdb: number | null;
     imdb: string | null;
   };
-}
-
-export interface singleEpisodeProp {
-  ep: IEpisode;
-}
-
-export interface singleTvShowProp {
-  show: tvShows;
-}
-
-export interface tvShowDropDownProps {
-  // tvShowsData: tvShows[];
-  tvShowID: string;
-  setTvShowDropDown(tvShowID: string): void;
 }

@@ -1,5 +1,5 @@
 import { tvShowDropDownProps } from "../Utils/Interfaces"
-import tvShows from "./tvShows.json"
+import tvShows from "../Utils/tvShows.json"
 
 export const TvShowDropDown = ({tvShowID, setTvShowDropDown}: tvShowDropDownProps): JSX.Element => {
     return (
@@ -17,9 +17,6 @@ export const TvShowDropDown = ({tvShowID, setTvShowDropDown}: tvShowDropDownProp
                     {show.name}  
                  </option> 
             ))}
-                
-
-
         </select>
         
         </>
