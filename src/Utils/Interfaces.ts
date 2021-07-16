@@ -1,3 +1,6 @@
+export interface AllEpisodeProp {
+  selectedShow: string;
+}
 export interface IEpisode {
   id: number;
   url: string;

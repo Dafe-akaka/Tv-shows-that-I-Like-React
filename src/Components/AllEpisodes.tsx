@@ -5,26 +5,34 @@ import { DropDown } from "./DropDown";
 import SearchBar from "./SearchBar";
 import { SearchFilter } from "../Utils/SearchFilter";
 import { DropDownFilter } from "../Utils/DropDownFilter";
-import { IEpisode } from "../Utils/Interfaces";
+import { AllEpisodeProp, IEpisode } from "../Utils/Interfaces";
 import { TvShowsDropDown } from "./TvshowsDropDown";
 
-function AllEpisodes(): JSX.Element {
+function AllEpisodes({selectedShow}: AllEpisodeProp): JSX.Element {
   const [search, setSearch] = useState("");
   const [dropDown, setDropDown] = useState("");
-  const [tvShow, setTvShowDropDown] = useState("82");
+  const [tvShow, setTvShowDropDown] = useState<string>(selectedShow);
   const [episodesData, setEpisodesData] = useState<IEpisode[]>([]);
 
   useEffect(() => {
+    function showState(show: string): string {
+      if (tvShow !== selectedShow) {
+        return show;
+      } else {
+        return selectedShow;
+      }
+    }
+
     const fetchEpisodesData = async () => {
       const response = await fetch(
-        `https://api.tvmaze.com/shows/${tvShow}/episodes`
+        `https://api.tvmaze.com/shows/${showState(tvShow)}/episodes`
       );
       const jsonBody: IEpisode[] = await response.json();
       setEpisodesData(jsonBody);
       console.log(jsonBody);
     };
     fetchEpisodesData();
-  }, [tvShow]);
+  }, [tvShow,selectedShow]);
 
 
   let filteredEps = [];
