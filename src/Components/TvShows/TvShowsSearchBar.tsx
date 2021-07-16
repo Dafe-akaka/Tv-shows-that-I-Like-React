@@ -1,8 +1,8 @@
-import { TvShowsSearchBar } from "../../Utils/Interfaces";
+import {  TvShowsSearchBarProps } from "../../Utils/Interfaces";
 
 
 
-export default function TvShowsSearchBar({setTvShowsSearchBar,tvShowID}:TvShowsSearchBar): JSX.Element {
+export default function TvShowsSearchBar({setTvShowsSearchBar,tvShowID}:TvShowsSearchBarProps): JSX.Element {
 
     return (
         <>

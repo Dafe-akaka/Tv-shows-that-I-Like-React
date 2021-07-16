@@ -32,9 +32,6 @@ export interface DropDownFilterProps {
   Episodes: IEpisode[];
 }
 
-export interface episodeProp {
-  episode: IEpisode;
-}
 
 export interface SearchBarProps {
   setSearchBar(episodeID: string): void;
@@ -42,10 +39,11 @@ export interface SearchBarProps {
 }
 
 
-export interface TvShowsSearchBar {
+export interface TvShowsSearchBarProps {
   setTvShowsSearchBar(tvShowID: string): void
   tvShowID: string
 }
+
 
 
 
@@ -57,10 +55,14 @@ export interface singleTvShowProp {
   show: tvShows;
 }
 
-export interface EpisodeDropDownProps {
+export interface TvShowsDataProps {
+ tvShowsData: tvShows[];
+}
+
+export interface TvShowsDropDownProps {
   // tvShowsData: tvShows[];
-  episodeID: string;
-  setEpisodeDropDown(tvShowID: string): void;
+  tvShowID: string;
+  setTvShowsDropDown(tvShowID: string): void;
 }
 
 
