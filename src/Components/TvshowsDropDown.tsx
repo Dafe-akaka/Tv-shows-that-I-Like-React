@@ -1,7 +1,10 @@
 import { TvShowsDropDownProps } from "../Utils/Interfaces"
 import tvShows from "../Utils/tvShows.json"
+import { useContext } from "react"
+import { showContext } from "../App"
 
 export const TvShowsDropDown = ({tvShowID, setTvShowsDropDown}: TvShowsDropDownProps): JSX.Element => {
+    const setSelectedShow = useContext(showContext)
     return (
         <> 
         <select
@@ -9,7 +12,7 @@ export const TvShowsDropDown = ({tvShowID, setTvShowsDropDown}: TvShowsDropDownP
         id="Drop"
         value={tvShowID}
         onChange={(e) => {
-          setTvShowsDropDown(e.target.value);
+          setSelectedShow(e.target.value);
         }}
         >
             {tvShows.map((show) => (
