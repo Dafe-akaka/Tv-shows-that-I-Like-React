@@ -32,14 +32,39 @@ export interface DropDownFilterProps {
   Episodes: IEpisode[];
 }
 
-export interface episodeProp {
-  episode: IEpisode;
-}
 
 export interface SearchBarProps {
   setSearchBar(episodeID: string): void;
   episodeID: string;
 }
+
+
+export interface TvShowsSearchBarProps {
+  setTvShowsSearchBar(tvShowID: string): void
+  tvShowID: string
+}
+
+
+
+
+export interface singleEpisodeProp {
+  ep: IEpisode;
+}
+
+export interface singleTvShowProp {
+  show: tvShows;
+}
+
+export interface TvShowsDataProps {
+ tvShowsData: tvShows[];
+}
+
+export interface TvShowsDropDownProps {
+  // tvShowsData: tvShows[];
+  tvShowID: string;
+  setTvShowsDropDown(tvShowID: string): void;
+}
+
 
 export interface tvShows {
   name: string;
@@ -92,12 +117,8 @@ export interface tvShows {
   };
 }
 
-export interface singleEpisodeProp {
-  ep: IEpisode;
-}
+export interface TVshowDropDownProps {
 
-export interface tvShowDropDownProps {
-  // tvShowsData: tvShows[];
   tvShowID: string;
   setTvShowDropDown(tvShowID: string): void;
 }

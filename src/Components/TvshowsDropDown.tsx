@@ -1,7 +1,7 @@
-import { tvShowDropDownProps } from "../Utils/Interfaces"
-import tvShows from "./tvShows.json"
+import { TvShowsDropDownProps } from "../Utils/Interfaces"
+import tvShows from "../Utils/tvShows.json"
 
-export const TvShowDropDown = ({tvShowID, setTvShowDropDown}: tvShowDropDownProps): JSX.Element => {
+export const TvShowsDropDown = ({tvShowID, setTvShowsDropDown}: TvShowsDropDownProps): JSX.Element => {
     return (
         <> 
         <select
@@ -9,7 +9,7 @@ export const TvShowDropDown = ({tvShowID, setTvShowDropDown}: tvShowDropDownProp
         id="Drop"
         value={tvShowID}
         onChange={(e) => {
-          setTvShowDropDown(e.target.value);
+          setTvShowsDropDown(e.target.value);
         }}
         >
             {tvShows.map((show) => (
@@ -17,9 +17,6 @@ export const TvShowDropDown = ({tvShowID, setTvShowDropDown}: tvShowDropDownProp
                     {show.name}  
                  </option> 
             ))}
-                
-
-
         </select>
         
         </>
