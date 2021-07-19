@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TvShowsDropDown } from "../TvshowsDropDown";
+import { TvShowsDropDown } from "../Episodes/TvshowsDropDown";
 import TvShowsSearchBar from "./TvShowsSearchBar";
 import { TvShowsSearchFilter } from "./TvShowsSearchFilter";
 import { TvShowsDropDownFilter } from "../../Utils/TvShowsDropDownFilter";

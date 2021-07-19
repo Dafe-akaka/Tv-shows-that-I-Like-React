@@ -1,6 +1,7 @@
 export interface AllEpisodeProp {
   selectedShow: string;
 }
+
 export interface IEpisode {
   id: number;
   url: string;
@@ -25,7 +26,7 @@ export interface IEpisode {
 }
 
 export interface DropDownProps {
-  episodes : IEpisode[]
+  episodes: IEpisode[]
   episodeID: string;
   setDropDown(episodeId: string): void;
 }
@@ -59,7 +60,7 @@ export interface singleTvShowProp {
 }
 
 export interface TvShowsDataProps {
- tvShowsData: tvShows[];
+  tvShowsData: tvShows[];
 }
 
 export interface TvShowsDropDownProps {

@@ -1,7 +1,4 @@
-
-import { DropDownProps } from "../Utils/Interfaces";
-
-
+import { DropDownProps } from "../../Utils/Interfaces";
 
 export const DropDown = ({
   episodes,
@@ -12,7 +9,6 @@ export const DropDown = ({
     setDropDown("");
   };
 
-  
   return (
     <>
       <select

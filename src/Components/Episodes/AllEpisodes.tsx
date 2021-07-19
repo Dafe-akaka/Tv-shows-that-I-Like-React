@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
-// import Episodes from "./episodes.json";
 import SingleEpisode from "./SingleEpisodeStructure";
 import { DropDown } from "./DropDown";
 import SearchBar from "./SearchBar";
-import { SearchFilter } from "../Utils/SearchFilter";
-import { DropDownFilter } from "../Utils/DropDownFilter";
-import { AllEpisodeProp, IEpisode } from "../Utils/Interfaces";
+import { SearchFilter } from "../../Utils/SearchFilter";
+import { DropDownFilter } from "../../Utils/DropDownFilter";
+import { AllEpisodeProp, IEpisode } from "../../Utils/Interfaces";
 import { TvShowsDropDown } from "./TvshowsDropDown";
 
-function AllEpisodes({selectedShow}: AllEpisodeProp): JSX.Element {
+function AllEpisodes({ selectedShow }: AllEpisodeProp): JSX.Element {
   const [search, setSearch] = useState("");
   const [dropDown, setDropDown] = useState("");
   const [tvShow, setTvShowDropDown] = useState<string>(selectedShow);
@@ -32,11 +31,10 @@ function AllEpisodes({selectedShow}: AllEpisodeProp): JSX.Element {
       console.log(jsonBody);
     };
     fetchEpisodesData();
-  }, [tvShow,selectedShow]);
-
+  }, [tvShow, selectedShow]);
 
   let filteredEps = [];
-  
+
   dropDown === ""
     ? (filteredEps = SearchFilter(search, episodesData))
     : (filteredEps = DropDownFilter(dropDown, episodesData));
