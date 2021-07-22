@@ -10,28 +10,28 @@ import { TvShowsDropDown } from "./TvshowsDropDown";
 function AllEpisodes({ selectedShow }: AllEpisodeProp): JSX.Element {
   const [search, setSearch] = useState("");
   const [dropDown, setDropDown] = useState("");
-  const [tvShow, setTvShowDropDown] = useState<string>(selectedShow);
+  // const [tvShow, setTvShowDropDown] = useState<string>(selectedShow);
   const [episodesData, setEpisodesData] = useState<IEpisode[]>([]);
 
   useEffect(() => {
-    function showState(show: string): string {
-      if (tvShow !== selectedShow) {
-        return show;
-      } else {
-        return selectedShow;
-      }
-    }
+    // function showState(show: string): string {
+    //   if (tvShow !== selectedShow) {
+    //     return show;
+    //   } else {
+    //     return selectedShow;
+    //   }
+    // }
 
     const fetchEpisodesData = async () => {
       const response = await fetch(
-        `https://api.tvmaze.com/shows/${showState(tvShow)}/episodes`
+        `https://api.tvmaze.com/shows/${selectedShow}/episodes`
       );
       const jsonBody: IEpisode[] = await response.json();
       setEpisodesData(jsonBody);
       console.log(jsonBody);
     };
     fetchEpisodesData();
-  }, [tvShow, selectedShow]);
+  }, [selectedShow]);
 
   let filteredEps = [];
 
@@ -41,6 +41,8 @@ function AllEpisodes({ selectedShow }: AllEpisodeProp): JSX.Element {
 
   return (
     <>
+      <header>selected episode show : {selectedShow}</header>
+      {/* <h1>tvShow: {tvShow}</h1> */}
       <DropDown
         setDropDown={setDropDown}
         episodeID={dropDown}
@@ -48,8 +50,8 @@ function AllEpisodes({ selectedShow }: AllEpisodeProp): JSX.Element {
       />
       <SearchBar setSearchBar={setSearch} episodeID={search} />
       <TvShowsDropDown
-        setTvShowsDropDown={setTvShowDropDown}
-        tvShowID={tvShow}
+        // setTvShowsDropDown={setTvShowDropDown}
+        tvShowID={selectedShow}
       />
 
       <div>

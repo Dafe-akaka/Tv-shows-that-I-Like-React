@@ -8,7 +8,8 @@ export default function SingleEpisode({ ep }: singleEpisodeProp): JSX.Element {
         {ep.season < 10 ? `S0${ep.season}` : `S${ep.season}`}
         {ep.number < 10 ? `E0${ep.number}` : `E${ep.number}`}
       </p>
-      <img src={ep.image.medium} alt={ep.name} />
+      {ep.image !== null  && <img src={ep.image.medium} alt={ep.name} />}
+      
       <p>{ep.summary.replace(/<p>|<\/p>/g, "")}</p>
     </div>
   );

@@ -11,13 +11,15 @@ export const showContext = createContext<showType>(() => {
 function App() {
   const [selectedShow, setSelectedShow] = useState<string>("");
 
+
   return (
     <div>
       <showContext.Provider value={setSelectedShow}>
-        <header></header>
+        <header>selected show : {selectedShow}</header>
+        
 
         {selectedShow === "" ? (
-          <AllTvShows />
+          <AllTvShows selectedShow={selectedShow}/>
         ) : (
           <AllEpisodes selectedShow={selectedShow} />
         )}

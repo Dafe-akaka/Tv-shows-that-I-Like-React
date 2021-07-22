@@ -5,9 +5,10 @@ import { showContext } from "../../App";
 
 export const TvShowsDropDown = ({
   tvShowID,
-  setTvShowsDropDown,
+
 }: TvShowsDropDownProps): JSX.Element => {
   const setSelectedShow = useContext(showContext);
+  
   return (
     <>
       <select
