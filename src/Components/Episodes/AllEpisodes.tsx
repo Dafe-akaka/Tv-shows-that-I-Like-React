@@ -41,7 +41,7 @@ function AllEpisodes({ selectedShow }: AllEpisodeProp): JSX.Element {
 
   return (
     <>
-      <header>selected episode show : {selectedShow}</header>
+      <header>Currently showing: {filteredEps.length}/{episodesData.length} episodes</header>
       {/* <h1>tvShow: {tvShow}</h1> */}
       <DropDown
         setDropDown={setDropDown}

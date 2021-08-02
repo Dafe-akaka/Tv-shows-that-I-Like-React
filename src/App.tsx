@@ -15,9 +15,7 @@ function App() {
   return (
     <div>
       <showContext.Provider value={setSelectedShow}>
-        <header>selected show : {selectedShow}</header>
-        
-
+    
         {selectedShow === "" ? (
           <AllTvShows selectedShow={selectedShow}/>
         ) : (

@@ -10,7 +10,7 @@ export default function SingleEpisode({ ep }: singleEpisodeProp): JSX.Element {
       </p>
       {ep.image !== null  && <img src={ep.image.medium} alt={ep.name} />}
       
-      <p>{ep.summary.replace(/<p>|<\/p>/g, "")}</p>
+      <p>{ep.summary? ep.summary.replace(/<p>|<\/p>/g, ""): "Sorry episode has no Summary"}</p>
     </div>
   );
 }
