@@ -2,6 +2,7 @@ import { useState, createContext } from "react";
 import AllEpisodes from "./Components/Episodes/AllEpisodes";
 import "./App.css";
 import AllTvShows from "./Components/TvShows/AllTvShows";
+
 type showType = (selectedShow: string) => void;
 
 export const showContext = createContext<showType>(() => {

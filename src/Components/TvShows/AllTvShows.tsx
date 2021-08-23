@@ -7,7 +7,7 @@ import SingleTvShowStructure from "./SingleTvShowStructure";
 import TvShows from "../../Utils/tvShows.json";
 import { AllEpisodeProp } from "../../Utils/Interfaces";
 
-const AllTvShows = ({selectedShow}:AllEpisodeProp) => {
+const AllTvShows = ({ selectedShow }: AllEpisodeProp) => {
   const [showTerm, setShowTerm] = useState("");
   // const [showDropDown, setTvShowsDropDown] = useState("");
 
@@ -19,13 +19,18 @@ const AllTvShows = ({selectedShow}:AllEpisodeProp) => {
 
   return (
     <div>
-      <TvShowsDropDown
-        // setTvShowsDropDown={setTvShowsDropDown}
-        tvShowID={selectedShow}
-      />
-      <TvShowsSearchBar setTvShowsSearchBar={setShowTerm} tvShowID={showTerm} />
+      <header>
+        <TvShowsDropDown
+          // setTvShowsDropDown={setTvShowsDropDown}
+          tvShowID={selectedShow}
+        />
+        <TvShowsSearchBar
+          setTvShowsSearchBar={setShowTerm}
+          tvShowID={showTerm}
+        />
+      </header>
 
-      <div>
+      <div className="show-container">
         {" "}
         {filteredShow.map((show) => (
           <SingleTvShowStructure key={show.id} show={show} />

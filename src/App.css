@@ -1,3 +1,59 @@
-h1{
-    cursor: pointer
+h1 {
+  cursor: pointer;
+}
+
+body {
+  background-color:rgb(47, 82, 73);
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+.show {
+  background-color: #0f914c;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  width: 250px;
+}
+
+.show-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show-info {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.show-info h4 {
+  margin: 0;
+}
+
+.show img {
+    width: 250px;
+}
+.show-summary {
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 0 -3px 5 rgb(0, 0,0, 0.1);
+  color: #22254b;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  max-height: 100%;
+  transform: translateY(102%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.show:hover .show-summary {
+  transform: translateY(0%);
 }
