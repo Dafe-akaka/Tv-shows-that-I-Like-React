@@ -6,6 +6,7 @@ import { SearchFilter } from "../../Utils/SearchFilter";
 import { DropDownFilter } from "../../Utils/DropDownFilter";
 import { AllEpisodeProp, IEpisode } from "../../Utils/Interfaces";
 import { TvShowsDropDown } from "./TvshowsDropDown";
+import "../../App.css" 
 
 function AllEpisodes({ selectedShow }: AllEpisodeProp): JSX.Element {
   const [search, setSearch] = useState("");
@@ -41,19 +42,36 @@ function AllEpisodes({ selectedShow }: AllEpisodeProp): JSX.Element {
 
   return (
     <>
-      <header>Currently showing: {filteredEps.length}/{episodesData.length} episodes</header>
-      {/* <h1>tvShow: {tvShow}</h1> */}
-      <DropDown
-        setDropDown={setDropDown}
-        episodeID={dropDown}
-        episodes={episodesData}
-      />
-      <SearchBar setSearchBar={setSearch} episodeID={search} />
-      <TvShowsDropDown
-        // setTvShowsDropDown={setTvShowDropDown}
-        tvShowID={selectedShow}
-      />
-
+    <div className= "navbar">
+      <ul>
+      <li>
+        <a href= "n_shows"> 
+          Currently showing: {filteredEps.length}/{episodesData.length} episodes
+        </a>
+        </li>
+        <li>
+          <a href= "dropdown"> 
+        <DropDown
+          setDropDown={setDropDown}
+          episodeID={dropDown}
+          episodes={episodesData}
+        />
+        </a>
+        </li>
+        <li> 
+          <a href= "search bar" className= "searchbar"> 
+        <SearchBar setSearchBar={setSearch} episodeID={search} />
+        </a>
+        </li>
+        <li>
+          <a href = "dropdown">
+        <TvShowsDropDown
+          tvShowID={selectedShow}
+        />
+        </a>
+        </li>
+      </ul>
+      </div>
       <div>
         {" "}
         {filteredEps.map((ep) => (
