@@ -18,6 +18,7 @@ export const DropDown = ({
         onChange={(e) => {
           setDropDown(e.target.value);
         }}
+        className="dropDown"
       >
         {episodes.map((episode) => (
           <option value={episode.id} key={episode.id}>

@@ -3,7 +3,7 @@ h1 {
 }
 
 body {
-  background-color:whitesmoke;
+  background-color: whitesmoke;
   color: whitesmoke;
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -38,13 +38,13 @@ body {
 }
 
 .show img {
-    width: 250px;
+  width: 250px;
 }
 .show-summary {
   background-color: white;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  box-shadow: 0 -3px 5 rgb(0, 0,0, 0.1);
+  box-shadow: 0 -3px 5 rgb(0, 0, 0, 0.1);
   color: #22254b;
   padding: 1rem;
   position: absolute;
@@ -77,7 +77,7 @@ ul {
 }
 
 /* Links inside the navbar */
-.navbar a {
+.navbar li {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -88,7 +88,7 @@ ul {
 }
 
 /* Change background on mouse-over */
-.navbar a:hover {
+.navbar li:hover {
   background: rgb(58, 116, 126);
   color: black;
 }
@@ -96,9 +96,4 @@ ul {
 /* Main content */
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
-}
-
-.searchbar {
-  position: relative;
-  bottom:15px
 }

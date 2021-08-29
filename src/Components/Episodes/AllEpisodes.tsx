@@ -11,18 +11,9 @@ import "../../App.css";
 function AllEpisodes({ selectedShow }: AllEpisodeProp): JSX.Element {
   const [search, setSearch] = useState("");
   const [dropDown, setDropDown] = useState("");
-  // const [tvShow, setTvShowDropDown] = useState<string>(selectedShow);
   const [episodesData, setEpisodesData] = useState<IEpisode[]>([]);
 
   useEffect(() => {
-    // function showState(show: string): string {
-    //   if (tvShow !== selectedShow) {
-    //     return show;
-    //   } else {
-    //     return selectedShow;
-    //   }
-    // }
-
     const fetchEpisodesData = async () => {
       const response = await fetch(
         `https://api.tvmaze.com/shows/${selectedShow}/episodes`
@@ -45,29 +36,29 @@ function AllEpisodes({ selectedShow }: AllEpisodeProp): JSX.Element {
       <div className="navbar">
         <ul>
           <li>
-            <a href="n_shows">
+            <p>
               Currently showing: {filteredEps.length}/{episodesData.length}{" "}
               episodes
-            </a>
+            </p>
           </li>
           <li>
-            <a href="dropdown">
+            <p>
               <DropDown
                 setDropDown={setDropDown}
                 episodeID={dropDown}
                 episodes={episodesData}
               />
-            </a>
+            </p>
           </li>
           <li>
-            <a href="search bar" className="searchbar">
+            <p>
               <SearchBar setSearchBar={setSearch} episodeID={search} />
-            </a>
+            </p>
           </li>
           <li>
-            <a href="dropdown">
+            <p>
               <TvShowsDropDown tvShowID={selectedShow} />
-            </a>
+            </p>
           </li>
         </ul>
       </div>

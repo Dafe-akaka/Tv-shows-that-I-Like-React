@@ -9,7 +9,6 @@ import { AllEpisodeProp } from "../../Utils/Interfaces";
 
 const AllTvShows = ({ selectedShow }: AllEpisodeProp) => {
   const [showTerm, setShowTerm] = useState("");
-  // const [showDropDown, setTvShowsDropDown] = useState("");
 
   let filteredShow = [];
 
@@ -22,17 +21,17 @@ const AllTvShows = ({ selectedShow }: AllEpisodeProp) => {
       <div className="navbar">
         <ul>
           <li>
-            <a href="tvshows">
+            <p>
               <TvShowsDropDown tvShowID={selectedShow} />
-            </a>
+            </p>
           </li>
           <li>
-            <a href="searchbar" className="searchbar">
+            <p>
               <TvShowsSearchBar
                 setTvShowsSearchBar={setShowTerm}
                 tvShowID={showTerm}
               />
-            </a>
+            </p>
           </li>
         </ul>
       </div>
