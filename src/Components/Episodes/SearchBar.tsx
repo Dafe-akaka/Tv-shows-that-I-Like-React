@@ -4,7 +4,6 @@ export default function SearchBar({
   setSearchBar,
   episodeID,
 }: SearchBarProps): JSX.Element {
-  // let displayCount = `${searchFilter.length} / ${Episodes.length}`
   return (
     <>
       <p>
@@ -16,9 +15,6 @@ export default function SearchBar({
             setSearchBar(event.target.value);
           }}
         />
-
-        {"  "}
-        {/* {displayCount} Displaying */}
       </p>
     </>
   );

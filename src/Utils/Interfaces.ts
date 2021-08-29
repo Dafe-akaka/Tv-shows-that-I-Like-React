@@ -66,7 +66,6 @@ export interface TvShowsDataProps {
 export interface TvShowsDropDownProps {
   // tvShowsData: tvShows[];
   tvShowID: string;
-  // setTvShowsDropDown(tvShowID: string): void;
 }
 
 

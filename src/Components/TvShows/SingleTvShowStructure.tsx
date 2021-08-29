@@ -16,12 +16,13 @@ export default function SingleTvShowStructure({
         <span>
           Rated: {show.rating.average}
           Genre: {show.genres}
-          {/* Runtime: {show.runtime} */}
         </span>
 
         <div className="show-summary">
           <h3>Summary:</h3>
-          <p>{show.summary.replace(/<p>|<\/p>/g, "")} </p>
+          <p>
+            {show.summary.replace(/<p>|<\/p>/g, "").replace(/<b>|<\/b>/g, "")}{" "}
+          </p>
         </div>
       </div>
     </div>

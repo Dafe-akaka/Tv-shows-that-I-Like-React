@@ -19,27 +19,23 @@ const AllTvShows = ({ selectedShow }: AllEpisodeProp) => {
 
   return (
     <div>
-      <div className= "navbar">
+      <div className="navbar">
         <ul>
           <li>
-            <a href= "tvshows"> 
-        <TvShowsDropDown
-          tvShowID={selectedShow}
-        />
-        </a>
-        </li>
-        <li> 
-          <a href= "searchbar" className= "searchbar"> 
-        <TvShowsSearchBar
-          setTvShowsSearchBar={setShowTerm}
-          tvShowID={showTerm}
-        />
-        </a>
-        </li>
+            <a href="tvshows">
+              <TvShowsDropDown tvShowID={selectedShow} />
+            </a>
+          </li>
+          <li>
+            <a href="searchbar" className="searchbar">
+              <TvShowsSearchBar
+                setTvShowsSearchBar={setShowTerm}
+                tvShowID={showTerm}
+              />
+            </a>
+          </li>
         </ul>
       </div>
-
-      
 
       <div className="show-container">
         {" "}
